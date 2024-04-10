@@ -1,0 +1,3 @@
+/home/janker/CLionProjects/Traceroute/cmake-build-debug/CMakeFiles/Traceroute.dir
+/home/janker/CLionProjects/Traceroute/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/janker/CLionProjects/Traceroute/cmake-build-debug/CMakeFiles/rebuild_cache.dir

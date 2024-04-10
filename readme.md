@@ -15,10 +15,6 @@ g++ functions.o main.o -o traceroute
 ```sh
 sudo ./traceroute
 ```
-## Пример использования
-```sh
-sudo ./traceroute example.com
-```
 ## Флаги компиляции
 При сборке утилиты Traceroute вы можете использовать несколько флагов для регулирования работы программы:
 
@@ -33,6 +29,10 @@ sudo ./traceroute example.com
 - `--help`: Выводит диалоговое окно для помощи и получения информации.
 - ```sh
   traceroute --help
+  ```
+## Пример использования
+  ```sh
+  sudo ./traceroute example.com
   ```
 ## Пример вывода программы
 ```sh

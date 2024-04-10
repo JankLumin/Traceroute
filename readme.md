@@ -12,19 +12,19 @@ g++ -c functions.cpp -o functions.o
 g++ functions.o main.o -o traceroute 
 ```
 ## Запуск утилиты Traceroute
-### Для корректной работы программы запускайте ее от имени суперпользователя:
+Для корректной работы программы запускайте ее от имени суперпользователя:
 ```sh
 sudo ./traceroute
 ```
 ## Сборка и запуск тестов
-### Сборка тестов
+Сборка тестов
 ```sh
 g++ -c tests.cpp -o tests.o
 g++ -c functions.cpp -o functions.o
 g++ functions.o tests.o -o tests -lgtest -lgtest_main -pthread
 ```
 ## Запуск тестов
-### Для корректной работы тестов запускайте их от имени суперпользователя:
+Для корректной работы тестов запускайте их от имени суперпользователя:
 ```sh
 sudo ./tests
 ```

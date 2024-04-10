@@ -1,2 +1,7 @@
 .idea
 cmake-build-debug
+functions.o
+main.o
+tests
+tests.o
+traceroute

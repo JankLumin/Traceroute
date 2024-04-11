@@ -1,16 +1,6 @@
 #include "funcions.h"
 #include "gtest/gtest.h"
 
-TEST(ParseCommandLineTest, BasicTest) {
-    int first_ttl = 1, max_ttl = MAX_HOPS;
-    std::string destination_host;
-    char* argv[] = {const_cast<char*>("program_name"), const_cast<char*>("-f"), const_cast<char*>("10"), const_cast<char*>("-m"), const_cast<char*>("20"), const_cast<char*>("example.com")};
-    ASSERT_TRUE(parseCommandLine(6, argv, first_ttl, max_ttl, destination_host));
-    ASSERT_EQ(first_ttl, 10);
-    ASSERT_EQ(max_ttl, 20);
-    ASSERT_EQ(destination_host, "example.com");
-}
-
 TEST(IsValidTTLTest, ValidTTLReturnsTrue) {
     EXPECT_TRUE(isValidTTL("50"));
     EXPECT_TRUE(isValidTTL("128"));
@@ -30,6 +20,16 @@ TEST(IsValidTTLTest, InvalidArgumentExceptionReturnsFalse) {
 TEST(IsValidTTLTest, NegativeTTLReturnsFalse) {
     EXPECT_FALSE(isValidTTL("-1"));
     EXPECT_FALSE(isValidTTL("-50"));
+}
+
+TEST(ParseCommandLineTest, BasicTest) {
+    int first_ttl = 1, max_ttl = MAX_HOPS;
+    std::string destination_host;
+    char* argv[] = {const_cast<char*>("program_name"), const_cast<char*>("-f"), const_cast<char*>("10"), const_cast<char*>("-m"), const_cast<char*>("20"), const_cast<char*>("example.com")};
+    ASSERT_TRUE(parseCommandLine(6, argv, first_ttl, max_ttl, destination_host));
+    ASSERT_EQ(first_ttl, 10);
+    ASSERT_EQ(max_ttl, 20);
+    ASSERT_EQ(destination_host, "example.com");
 }
 
 TEST(CreateSocketTest, SocketCreationSuccessAndClose) {

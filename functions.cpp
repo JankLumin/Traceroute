@@ -20,7 +20,7 @@ void printHelp(const char *programName) {
     std::cerr << "Options:\n";
     std::cerr << "  -f, --first-ttl=VALUE  Start from the first_ttl hop (instead from 1)\n";
     std::cerr << "  -m, --max-ttl=VALUE    Set the max number of hops (max TTL to be reached). Default is 30\n";
-    std::cerr << "  --help                 Read this help and exit\n";
+    std::cerr << "  -h, --help             Read this help and exit\n";
 }
 
 int createSocket(int protocol) {
